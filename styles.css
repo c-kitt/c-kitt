@@ -61,6 +61,16 @@ body {
     color: #111;
     margin-bottom: 14px;
   }
+
+  .recently {
+    margin-top: 10px;
+    margin-left: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 1.35rem;
+    color: #111;
+    margin-bottom: 14px;
+  }
   
   .contact-header {
     margin-top: 27px;
