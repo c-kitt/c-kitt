@@ -85,10 +85,12 @@ body {
   
   .contact-text {
     margin-top: 18px;
+    margin-bottom: 0;
   }
   
   .contact-list {
     margin-top: 18px;
+    margin-bottom: 0;
   }
   
   .news-item {
@@ -148,8 +150,8 @@ body {
     max-width: 650px;
     margin-left: 3vw;
     margin-right: auto;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: -5px;
+    margin-bottom: 0px;
     text-align: left;
   }
   
