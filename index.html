@@ -1,81 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ckitt</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/x-icon" href="okcat.ico">
+    <title>Casey Kittredge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="okcat.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="okcat.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="okcat.ico">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libss/font-serif/1.0.0/fonts.min.css" async>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap"
+        async>
 </head>
+
 <body>
-  <div class="main-container">
-    <nav class="navbar">
-      <div class="navbar-name">Casey Kittredge</div>
-      <div class="navbar-links">
-        <a href="index.html" class="nav-link active">Home</a>
-      </div>
-    </nav>
-    <div class="body-text">
-      under construction
+    <div class="container">
+        <div class="content">
+            <h2>Casey Kittredge</h2>
+
+            <p>Some things about me:</p>
+            <ul>
+                <li>Studying mechanical engineering and physics at <a href="https://www.brown.edu">Brown</a></li>
+                <li>Currently working on structures in <a href="https://sites.google.com/brown.edu/fsae/home">Brown FSAE</a></li>
+                <li>Interested in robotics and aerospace technologies</li>
+                <li>Missing my dog (a lot)</li>
+                <li>Always trying to be better</li>
+            </ul>
+
+            <p>Some things I read:</p>
+            <ul>
+                <li><a href="bookshelf.html">Bookshelf</a></li>
+                <!-- <li><a href="/writing/bio.html">A Longer, More Informal Bio</a></li> -->
+            </ul>   
+
+            <p>Some things I did:</p>
+            <ul>
+                <li>Placed 3rd at the <a href="https://www.youtube.com/@727robotics">VEX Robotics 2025 world
+                        championship</a></li>
+                <li>Made a dashboard for <a href="https://deepfeat.ai/">Deep Feat</a>, a Brown startup</li>
+                <li>Taught math to kids at <a href="https://www.mathnasium.com/">Mathnasium</a></li>
+            </ul>
+
+            <p>Some things I'm working on:</p>
+            <ul>
+                <li>Completinng the LEGO Death Star</li>
+                <li>Training for a half marathon</li>
+                <li>Developing <span id="obfuscated-text-2"></span> for some hackathons</li>
+            </ul>
+
+            <p>Some places to find me:</p>
+            <ul>
+                <li>Email: kittredge at brown dot edu</li>
+                <li>Github: <a href="https://github.com/c-kitt">@c-kitt</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/c-kittredge">@c-kittredge</a></li>
+            </ul>
+
+
+            <p class="with-space">
+
+                <span class="italic">Edited January 12, 2025</span>
+            </p>
+
+        </div>
     </div>
 
-    <!--
-    <div class="body-text">
-      Hi, I'm Casey, a freshman at Brown University pursuing a BS in Computer Science and AB in Mathematics. I chose Brown for its open curriculum and research/extracurricular opportunities. Some of my recent coursework includes:<br>
-      <br>
-      •   Accelerated Introduction to Computer Science (CSCI0190)<br>
-      •   Multivariable Calculus [Physics/Engineering](MATH0200)<br>
-      •   Linear Algebra with Theory (MATH0540)<br>
-       + more <br><br>
+    
 
-      I've always been drawn to complex systems involving topics grounded in math and logic. I have a lot to learn, and I'm excited to keep doing so @ Brown.<br><br>
-    </div>
+    <script>
+        function generateRandomText(length) {
+            const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return result;
+        }
 
-    <div class="recently">recently</div>
+        function updateObfuscatedText() {
+            const element1 = document.getElementById('obfuscated-text-1');
+            const element2 = document.getElementById('obfuscated-text-2');
 
-    <div class="body-text">
-      <div class="news-item">
-        <span class="news-date">Nov 2025</span> — I participated in <a href="https://chrhs.watson.brown.edu/education/hack-for-humanity"  target="_blank">Hack for Humanity</a>, developing <a href="https://alba-safe-haven-guide.lovable.app/"  target="_blank">alba</a>.
-      </div>
-      <div class="news-item">
-        <span class="news-date">Oct 2025</span> — I started at <a href="https://deepfeat.ai/"  target="_blank">Deep Feat</a> as a software engineering intern.
-      </div>
-      <div class="news-item">
-        <span class="news-date">Sep 2025</span> — I joined <a href="https://www.fullstackatbrown.com/"  target="_blank">Full Stack @ Brown</a> and <a href="https://www.brownspace.io/" target="_blank">Brown Space Engineering</a>.
-      </div>
-      <div class="news-item">
-        <span class="news-date">Aug 2025</span> — I started my enrollment at <a href="https://www.brown.edu"  target="_blank">Brown!</a>
-      </div>
-      <div class="news-item">
-        <span class="news-date">Jun 2025</span> — I graduated from Tampa Preparatory School, as valedictorian.
-      </div>
-      <div class="news-item">
-        <span class="news-date">May 2025</span> — My team competed at the VEX Robotics World Championship, going 10 - 0 in qualifications!
-      </div>
-      <div class="news-item">
-        <span class="news-date">Feb 2025</span> — I completed 10 months of teaching at <a href="https://www.mathnasium.com" target="_blank"></a>Mathnasium</a>.
-      </div>
-    </div>
+            if (element1) {
+                element1.textContent = generateRandomText(5);
+            }
+            if (element2) {
+                element2.textContent = generateRandomText(5);
+            }
+        }
 
-    <div class="spacer-small"></div>
-    <div class="section-header contact-header">contact</div>
-    <div class="body-text contact-text">
-      I'm always happy to talk. Feel free to reach out.
-      <ul class="contact-list">
-        <li>Email: kittredge [at] brown [dot] edu</li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/c-kittredge" target="_blank">@c-kittredge</a></li>
-        <li>Instagram: <a href="https://www.instagram.com/casey.kittredge" target="_blank">@casey.kittredge</a></li>
-        <li>Twitter: <a href="https://twitter.com/ckitt100" target="_blank">@ckitt100</a></li>
-        <li>GitHub: <a href="https://github.com/c-kitt" target="_blank">@c-kitt</a></li>
-      </ul>
-    </div>
-    -->
-  </div>
-  <footer class="footer">
-    <div class="footer-inspiration">
-      website inspired by <a href="https://www.aliua.me/" target="_blank">ali ahmad</a>
-    </div>
-    <div class="footer-edited"><em>edited october 2025</em></div>
-  </footer>
+        setInterval(updateObfuscatedText, 50);
+
+        updateObfuscatedText();
+    </script>
 </body>
-</html> 
+
+</html>
