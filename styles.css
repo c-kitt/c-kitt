@@ -1,0 +1,166 @@
+body {
+    background: #f5f4ee;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: #111;
+  }
+  
+  .main-container {
+    width: 90%;
+    max-width: 650px;
+    margin-left: 3vw;
+    margin-right: auto;
+    min-height: 92vh;
+    box-sizing: border-box;
+    padding-top: .5vw;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    margin-top: 30px;
+  }
+  
+  .navbar-name {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 1.8rem;
+    color: #111;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    color: #111;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  .nav-link.active {
+    text-decoration: underline;
+  }
+  
+  .section-header {
+    margin-top: 29px;
+    margin-left: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 1.35rem;
+    color: #111;
+    margin-bottom: 14px;
+  }
+
+  .recently {
+    margin-top: 10px;
+    margin-left: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 1.35rem;
+    color: #111;
+    margin-bottom: 14px;
+  }
+  
+  .contact-header {
+    margin-top: 27px;
+  }
+  
+  .body-text {
+    font-size: .95rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: #111;
+    line-height: 1.5;
+  }
+  
+  .contact-text {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+  
+  .contact-list {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+  
+  .news-item {
+    margin-bottom: 5px;
+  }
+  
+  .project-item {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .project-description {
+    flex: 1;
+    margin-right: 12.5px;
+  }
+  
+  .pipe-separator {
+    margin-right: 10px;
+  }
+  
+  .project-date-right {
+    font-style: italic;
+    white-space: nowrap;
+    width: 80px;
+    text-align: left;
+  }
+  
+  .news-date {
+    font-weight: regular;
+  }
+  
+  .project-date {
+    font-weight: regular;
+  }
+  
+  .spacer {
+    margin-top: 22px;
+  }
+  
+  .spacer-small {
+    margin-top: 15px;
+  }
+  
+  a {
+    color: #111;
+    text-decoration: underline;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  .footer {
+    width: 90%;
+    max-width: 650px;
+    margin-left: 3vw;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .footer-inspiration {
+    margin-bottom: 8px;
+    font-size: 1rem;
+  }
+  
+  .footer-edited {
+    font-size: 1rem;
+    font-style: italic;
+  } 
