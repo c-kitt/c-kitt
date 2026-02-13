@@ -266,6 +266,100 @@ footer {
     margin-bottom: 0.5rem;
 } */
 
+.content-project {
+    max-width: 1000px;
+}
+
+.project-subtitle {
+    margin-top: -0.75rem;
+}
+
+.project-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.project-sections {
+    flex: 1;
+    min-width: 300px;
+    overflow: hidden;
+}
+
+.project-sections h3 {
+    white-space: nowrap;
+}
+
+.tech-stack {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 2rem;
+    width: fit-content;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    margin-top: 1.25rem;
+}
+
+.carousel-img {
+    width: 350px;
+    min-width: 350px;
+    height: 260px;
+    min-height: 260px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    background-color: #e8e5de;
+    display: block;
+}
+
+.carousel-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #1a1a1a;
+    padding: 0.25rem;
+    line-height: 1;
+}
+
+.carousel-inner {
+    text-align: center;
+}
+
+.carousel-caption {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.4rem;
+    max-width: 350px;
+    text-align: center;
+}
+
+.carousel-btn:hover {
+    color: #666;
+}
+
+.content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.project-sections h3:first-child {
+    margin-top: 0.5rem;
+}
+
+/* Portfolio list spacing */
+.portfolio-list {
+    list-style: none;
+}
+
+.portfolio-list li {
+    margin-bottom: 1.25rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
     body {
@@ -302,6 +396,23 @@ body {
     flex-direction: column;
     min-height: 100vh;
     /* Allow growing */
+}
+
+/* Simple site nav */
+.site-nav {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.site-nav .nav-link {
+    text-decoration: none;
+    margin-right: 0.75rem;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .ascii-art {
