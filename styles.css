@@ -374,9 +374,31 @@ footer {
         font-size: 1.75rem;
     }
 
-
     .content {
         font-size: 0.9rem;
+    }
+
+    .project-body {
+        flex-direction: column;
+    }
+
+    .project-sections {
+        min-width: 0;
+    }
+
+    .carousel-img {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 0;
+    }
+
+    .carousel-caption {
+        max-width: 100%;
+    }
+
+    .tech-stack {
+        grid-template-columns: repeat(2, max-content);
     }
 }
 
