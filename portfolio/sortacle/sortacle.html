@@ -34,46 +34,56 @@
                 <a href="../../index.html" class="nav-link">Home</a>
                 <a href="../../portfolio.html" class="nav-link active">Portfolio</a>
             </nav>
-            <h2>Sortacle — Automated Sorting System</h2>
+
+            <h2>Sortacle</h2>
             <p class="italic project-subtitle">
-                Mechatronic prototype that combines computer vision with mechanical actuation to sort physical objects in real time.
+                AI-powered waste bin that identifies and routes items in real time using cloud computer vision and a servo-driven sorting platform.
             </p>
 
             <div class="project-body">
                 <div class="project-sections">
-                    <h3>Project Breakdown</h3>
-                    <ul>
-                        <li>Designed and 3D-printed a rotating tray mechanism for physical object sorting</li>
-                        <li>Integrated a Raspberry Pi with camera, motor driver, and actuators</li>
-                        <li>Implemented a computer vision pipeline to classify objects from live video</li>
-                        <li>Linked vision output to deterministic mechanical actuation</li>
-                        <li>Built and tested the full system under hackathon time constraints</li>
-                    </ul>
+        <h3>Project Breakdown</h3>
+        <ul>
+            <li>Designed the sorting tray, camera mount, motor mounts, and bearing interfaces in CAD, iterating through 6+ mechanical revisions</li>
+            <li>Fabricated all custom components via in-house FDM 3D printing and assembled the complete mechatronic system</li>
+            <li>Integrated a Raspberry Pi camera for on-device image capture and managed data flow to a remote inference service</li>
+            <li>Implemented a cloud-based computer vision pipeline using YOLO-World served through a FastAPI endpoint</li>
+            <li>Developed a servo-driven actuation system to route classified objects with repeatable and deterministic motion</li>
+            <li>Validated system performance through live demonstrations, earning Best Overall Project at Hack@Brown 2026</li>
+        </ul>
+
 
                     <h3>Technical Stack</h3>
                     <ul class="tech-stack">
-                        <li>Raspberry Pi</li>
+                        <li>SolidWorks (CAD & Sheet Metal)</li>
+                        <li>Bambu Lab FDM 3D Printing</li>
+                        <li>Raspberry Pi 4</li>
+                        <li>PCA9685 Servo Control</li>
+                        <li>Motors & Sensors</li>
                         <li>Python</li>
                         <li>OpenCV</li>
-                        <li>Computer Vision</li>
-                        <li>3D Printing</li>
-                        <li>Motors</li>
-                        <li>Sensors</li>
+                        <li>YOLO-World (Ultralytics)</li>
+                        <li>FastAPI (Cloud Inference)</li>
+                        <li>Vultr (Deployment)</li>
                     </ul>
+
 
                     <h3>References</h3>
                     <ul>
-                        <li><a href="#">GitHub Repository</a></li>
-                        <li><a href="#">Demo Video</a></li>
-                        <li><a href="#">CAD Files</a></li>
+                        <li><a href="https://github.com/flxnaf/sortacle">GitHub</a></li>
+                        <li><a href="https://youtu.be/g5Y1oJZ6-ws">Demo</a></li>
+                        <li><a href="https://sortacle.tech/">Website</a></li>
+                        <li><a href="https://devpost.com/software/sortacle">Devpost</a></li>
                     </ul>
                 </div>
 
+                <!-- Leaving your carousel exactly as-is -->
                 <div class="carousel">
                     <button class="carousel-btn carousel-prev">&lsaquo;</button>
                     <div class="carousel-inner">
-                        <img src="img/sortacle-system.jpg" alt="Sortacle system overview" class="carousel-img">
-                        <p class="carousel-caption italic">Sortacle prototype overview</p>
+                        <img src="photos/AwardWon.jpeg" alt="Sortacle award" class="carousel-img">
+                        <video class="carousel-video" controls muted style="display:none;"></video>
+                        <p class="carousel-caption italic">Best Overall Project — Hack@Brown 2026</p>
                     </div>
                     <button class="carousel-btn carousel-next">&rsaquo;</button>
                 </div>
@@ -81,22 +91,41 @@
 
         </div>
     </div>
+
     <script>
         const slides = [
-            // Add slides here, e.g.:
-            // { src: 'img1.jpg', caption: 'First photo' },
-            // { src: 'img2.jpg', caption: 'Second photo' },
+            { src: 'photos/AwardWon.jpeg', caption: 'Best Overall Project — Hack@Brown 2026' },
+            { src: 'photos/VideoDemo.mp4', caption: 'Brief sorting demonstration, with the tray rotating upon detection', type: 'video' },
+            { src: 'photos/FrontView.jpeg', caption: 'Front view of Sortacle, with the LED lights turned on for illumination' },
+            { src: 'photos/MiddleView.jpeg', caption: 'Inner view of Sortacle, with a CNC piece of sheet metal as seperation' },
+            { src: 'photos/InnerMotorView.jpeg', caption: 'Inner view of motor, screwed to the tray with a 3D-printed hub' },
+            { src: 'photos/OuterMotorView.jpeg', caption: 'Outer view of motor, mounted on a 3D-printed plate & screwed in' },
+            { src: 'photos/CameraView.jpeg', caption: 'PiCamera, mounted on a 3D-printed plate situated on top of the bin' },
+            { src: 'photos/BackView.jpeg', caption: 'Final electronics schematics, including pi & PCA; wire management' },
+            { src: 'photos/PlateView.jpeg', caption: '3D-printed decorational plate, modeled after a Robotics license plate' },
+            { src: 'photos/Trayv2.jpeg', caption: 'Close up of 3D-printed tray, sectioned into quarters due to bed limits' },
         ];
         let currentIndex = 0;
         const img = document.querySelector('.carousel-img');
+        const video = document.querySelector('.carousel-video');
         const caption = document.querySelector('.carousel-caption');
         const prevBtn = document.querySelector('.carousel-prev');
         const nextBtn = document.querySelector('.carousel-next');
 
         function showImage(index) {
             if (slides.length > 0) {
-                img.src = slides[index].src;
-                caption.textContent = slides[index].caption;
+                const slide = slides[index];
+                caption.textContent = slide.caption;
+                if (slide.type === 'video') {
+                    img.style.display = 'none';
+                    video.src = slide.src;
+                    video.style.display = 'block';
+                } else {
+                    video.style.display = 'none';
+                    video.pause();
+                    img.src = slide.src;
+                    img.style.display = 'block';
+                }
             }
         }
 

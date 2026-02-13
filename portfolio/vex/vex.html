@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Casey Kittredge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="../../okcat.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../okcat.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../okcat.ico">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="../../site.webmanifest">
+
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libss/font-serif/1.0.0/fonts.min.css" async>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap"
+        async>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content content-project">
+            <nav class="site-nav">
+                <a href="../../index.html" class="nav-link">Home</a>
+                <a href="../../portfolio.html" class="nav-link active">Portfolio</a>
+            </nav>
+
+            <h2>VEX Robotics</h2>
+            <p class="italic project-subtitle">
+                Competition robot designed, manufactured, and programmed for the 2025 VEX World Championship.
+            </p>
+
+            <div class="project-body">
+                <div class="project-sections">
+            <h3>Project Breakdown</h3>
+<ul>
+    <li>Designed a complete competition robot in Autodesk Inventor with 90+ custom components, managing tolerances, clearances, and subsystem interfaces</li>
+    <li>Fabricated Delrin and polycarbonate components via CNC and laser cutting, and machined steel axles using drill press and hand-finishing tools</li>
+    <li>Designed piston-actuated mechanisms including a color-sorting system and a goal-rush arm to improve autonomous and match performance</li>
+    <li>Developed and tuned a sensor-driven autonomous control stack using PID and odometry with custom distance-reset logic for repeatable positioning</li>
+    <li>Implemented a localization system using four distance sensors and dual tracking wheels (horizontal and vertical) for field-state estimation</li>
+    <li>Led a six-person engineering team and validated 10+ autonomous routines through competition, finishing 10–0 at Worlds, placing 3rd of 80+ in the hardest division</li>
+</ul>
+
+
+
+<h3>Technical Stack</h3>
+<ul class="tech-stack">
+    <li>Autodesk Inventor (CAD)</li>
+    <li>Delrin & Polycarbonate Fabrication</li>
+    <li>Laser Cutting & CNC Machining</li>
+    <li>Steel Axle Machining (Drill Press)</li>
+    <li>Pneumatic / Piston Actuation</li>
+    <li>C / C++</li>
+    <li>PID Control</li>
+    <li>Odometry & Tracking Wheels</li>
+    <li>Distance Sensors (x4)</li>
+    <li>Autonomous Systems Integration</li>
+</ul>
+
+
+                    <h3>References</h3>
+                    <ul>
+                        <li><a href="https://github.com/c-kitt/VEXWorlds2025">Github</a></li>
+                        <li><a href="https://www.youtube.com/@727robotics">YouTube</a></li>
+                        <li><a href="https://www.instagram.com/727robotics/">Instagram</a></li>
+                        <li><a href="https://robotreplay.tv/event/RE-V5RC-24-8909/division/6/stream">Match Footage</a></li>
+                    </ul>
+                </div>
+
+                <!-- Template carousel: add 4–6 photos later -->
+                <div class="carousel">
+                    <button class="carousel-btn carousel-prev">&lsaquo;</button>
+                    <div class="carousel-inner">
+                        <img src="photos/CAD.png" alt="VEX Worlds robot photo" class="carousel-img">
+                        <video class="carousel-video" controls muted style="display:none;"></video>
+                        <p class="carousel-caption italic">Full robot CAD model with drivetrain, lift, and intake systems</p>
+                    </div>
+                    <button class="carousel-btn carousel-next">&rsaquo;</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const slides = [
+            { src: 'photos/CAD.png', caption: 'Full robot CAD model with drivetrain, lift, and intake systems' },
+            { src: 'photos/FinalBuild.jpeg', caption: 'Completed robot pre-competition, loaded with rings on the stake' },
+            { src: 'photos/GoalRush.mp4', caption: 'Goal rush autonomous routine during Worlds elimination match', type: 'video' },
+            { src: 'photos/ColorSort.mp4', caption: 'Color sorting mechanism filtering rings in real time', type: 'video' },
+            { src: 'photos/WireManagement.jpeg', caption: 'V5 brain and wire management, routed and secured inside the chassis' },
+            { src: 'photos/BatteryMount.jpeg', caption: 'Battery and gearing closeup, with custom-mounted delrin pieces' },
+            { src: 'photos/Build1.jpeg', caption: 'Early chassis prototype on the practice field with game elements' },
+            { src: 'photos/Build2.jpeg', caption: 'Mid-build arm mechanism, testing ring grip on the intake' },
+            { src: 'photos/Build3.jpeg', caption: 'Near-final build with rings scored, testing on the home field' },
+            { src: 'photos/LaserCutting.JPG', caption: 'Laser-cutting delrin pieces at local makerspace' },
+        ];
+
+        let currentIndex = 0;
+        const img = document.querySelector('.carousel-img');
+        const video = document.querySelector('.carousel-video');
+        const caption = document.querySelector('.carousel-caption');
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+
+        function showImage(index) {
+            if (slides.length > 0) {
+                const slide = slides[index];
+                caption.textContent = slide.caption;
+
+                if (slide.type === 'video') {
+                    img.style.display = 'none';
+                    video.src = slide.src;
+                    video.style.display = 'block';
+                } else {
+                    video.style.display = 'none';
+                    video.pause();
+                    img.src = slide.src;
+                    img.style.display = 'block';
+                }
+            } else {
+                img.style.display = 'none';
+                video.style.display = 'none';
+            }
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (slides.length === 0) return;
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showImage(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (slides.length === 0) return;
+            currentIndex = (currentIndex + 1) % slides.length;
+            showImage(currentIndex);
+        });
+
+        showImage(currentIndex);
+    </script>
+</body>
+
+</html>

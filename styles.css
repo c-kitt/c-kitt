@@ -277,12 +277,12 @@ footer {
 .project-body {
     display: flex;
     align-items: flex-start;
-    gap: 0;
+    gap: 6rem;
 }
 
 .project-sections {
-    flex: 1;
-    min-width: 300px;
+    flex: 2;
+    min-width: 600px;
     overflow: hidden;
 }
 
@@ -306,10 +306,25 @@ footer {
 }
 
 .carousel-img {
-    width: 350px;
-    min-width: 350px;
-    height: 260px;
-    min-height: 260px;
+    width: 425px;
+    min-width: 425px;
+    max-width: 425px;
+    height: 320px;
+    min-height: 320px;
+    max-height: 320px;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    background-color: #e8e5de;
+    display: block;
+}
+
+.carousel-video {
+    width: 425px;
+    min-width: 425px;
+    max-width: 425px;
+    height: 320px;
+    min-height: 320px;
+    max-height: 320px;
     object-fit: cover;
     border: 1px solid #ccc;
     background-color: #e8e5de;
@@ -324,6 +339,7 @@ footer {
     color: #1a1a1a;
     padding: 0.25rem;
     line-height: 1;
+    margin-top: -1.5rem;
 }
 
 .carousel-inner {
@@ -334,7 +350,7 @@ footer {
     font-size: 0.85rem;
     color: #666;
     margin-top: 0.4rem;
-    max-width: 350px;
+    max-width: 425px;
     text-align: center;
 }
 
@@ -349,6 +365,45 @@ footer {
 
 .project-sections h3:first-child {
     margin-top: 0.5rem;
+}
+
+/* Software projects layout */
+.software-project {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.software-project-text {
+    flex: 1;
+}
+
+.software-project-text h4 {
+    margin-bottom: 0.25rem;
+}
+
+.software-project-text ul {
+    margin-top: 0.25rem;
+}
+
+.software-project-img {
+    flex-shrink: 0;
+    margin-top: 1.75rem;
+}
+
+.software-img {
+    width: 200px !important;
+    min-width: 200px !important;
+    max-width: 200px !important;
+    height: 150px !important;
+    min-height: 150px !important;
+    max-height: 150px !important;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    background-color: #e8e5de;
+    display: block;
 }
 
 /* Portfolio list spacing */
