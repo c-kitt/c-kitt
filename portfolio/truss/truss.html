@@ -20,7 +20,7 @@
     <!-- Web App Manifest -->
     <link rel="manifest" href="../site.webmanifest">
 
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libss/font-serif/1.0.0/fonts.min.css" async>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap"
@@ -40,16 +40,36 @@
             <div class="project-body">
                 <div class="project-sections">
                     <h3>Project Breakdown</h3>
+                    <ul>
+                        <li>Built a Pratt truss bridge from scratch for ENGN 0040: Principles of Statics and Dynamics at Brown University</li>
+                        <li>Modeled each structural member individually in Autodesk Inventor, then ran frame analysis to verify load paths and member forces before cutting</li>
+                        <li>Iterated through 4+ design versions, refining joint geometry, tab-slot connections, and member proportions to improve both strength and weight efficiency</li>
+                        <li>Laser cut all pieces from masonite sheet stock, assembling them into a completed bridge weighing approximately 0.9 kg</li>
+                        <li>Bridge was destructively load-tested and held over 220 lbs, achieving a high structural efficiency ratio relative to its own weight</li>
+                    </ul>
 
                     <h3>Technical Stack</h3>
+                    <ul class="tech-stack">
+                        <li>Autodesk Inventor (3D Modeling)</li>
+                        <li>Frame Analysis (FEA)</li>
+                        <li>Laser Cutting (Masonite)</li>
+                        <li>Truss / Structural Design</li>
+                        <li>Tab-Slot Joinery</li>
+                        <li>Iterative Prototyping</li>
+                        <li>Statics & Free Body Diagrams</li>
+                        <li>Load Testing</li>
+                    </ul>
 
                     <h3>References</h3>
+                    <ul>
+                        <li>Lab Report (coming soon)</li>
+                    </ul>
                 </div>
                 <div class="carousel">
                     <button class="carousel-btn carousel-prev">&lsaquo;</button>
                     <div class="carousel-inner">
-                        <img src="" alt="Project photo" class="carousel-img">
-                        <p class="carousel-caption italic">Caption goes here</p>
+                        <img src="photos/Angle1assembled.jpeg" alt="Truss bridge photo" class="carousel-img">
+                        <p class="carousel-caption italic">Completed Pratt truss bridge — front angle view showing chord and diagonal member layout</p>
                     </div>
                     <button class="carousel-btn carousel-next">&rsaquo;</button>
                 </div>
@@ -59,9 +79,10 @@
     </div>
     <script>
         const slides = [
-            // Add slides here, e.g.:
-            // { src: 'img1.jpg', caption: 'First photo' },
-            // { src: 'img2.jpg', caption: 'Second photo' },
+            { src: 'photos/Angle1assembled.jpeg', caption: 'Completed Pratt truss bridge — front angle view showing chord and diagonal member layout' },
+            { src: 'photos/angle2assembled.jpeg', caption: 'Side angle view of the finished bridge, highlighting the tab-slot joint connections' },
+            { src: 'photos/Partiallyassembled.jpeg', caption: 'Bridge mid-assembly, with vertical members and diagonals fitted into the bottom chord' },
+            { src: 'photos/Bridgepieces.jpeg', caption: 'Laser-cut masonite pieces laid out before assembly — all members from the final design iteration' },
         ];
         let currentIndex = 0;
         const img = document.querySelector('.carousel-img');
